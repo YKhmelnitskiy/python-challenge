@@ -77,6 +77,7 @@ file.write(f"Greatest Increase in Profits: {date_big_inc} (${greatest_increase})
 file.write(f"Greatest Decrease in Profits: {date_big_dec} (${greatest_decrease})\n")
 
 file.close()
+
 #round(number[, ndigits])
 #for n in range(len(full_ting)):
     #print(n)
