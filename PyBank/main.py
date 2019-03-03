@@ -35,7 +35,7 @@ with open(budget_data_csv, newline="") as csvfile:
         net_total = net_total + int(row[1])
         
 
-#average = ((final_value - first_value)/(first_value)) * 100
+#average = ((second_value - first_value)/(first_value)) * 100
 
 #We are going into our list of lists, and getting third column values to figure out average change while skipping the first row
 for i in range(len(full_ting)):
@@ -67,6 +67,16 @@ print (f"Average Change: ${rounded_avg_chg}")
 print (f"Greatest Increase in Profits: {date_big_inc} (${greatest_increase})")
 print (f"Greatest Decrease in Profits: {date_big_dec} (${greatest_decrease})")
 
+file = open("PyBank_Results.txt","w")
+
+file.write("Financial Analysis\n")
+file.write("----------------------------\n")
+file.write(f"Total Months: {total_months}\n")
+file.write(f"Average Change: ${rounded_avg_chg}\n")
+file.write(f"Greatest Increase in Profits: {date_big_inc} (${greatest_increase})\n")
+file.write(f"Greatest Decrease in Profits: {date_big_dec} (${greatest_decrease})\n")
+
+file.close()
 #round(number[, ndigits])
 #for n in range(len(full_ting)):
     #print(n)
